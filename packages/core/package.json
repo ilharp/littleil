@@ -1,0 +1,33 @@
+{
+  "name": "koishi-plugin-littleil-core",
+  "private": true,
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.18.7"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4",
+    "koishi-plugin-nekoil-adapter-telegram": "workspace:^"
+  },
+  "dependencies": {
+    "@satorijs/element": "^3.1.7",
+    "lodash-es": "^4.17.21"
+  },
+  "koishi": {
+    "service": {
+      "required": []
+    }
+  }
+}
