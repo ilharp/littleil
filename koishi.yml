@@ -2,8 +2,8 @@ plugins:
   group:server:
     server:bctbjh:
       host: 0.0.0.0
-      port: '${{ env.LITTLEIL_ENV === ''production'' ? 80 : 5140 }}'
-      maxPort: '${{ env.LITTLEIL_ENV === ''production'' ? 80 : 5140 }}'
+      port: "${{ env.LITTLEIL_ENV === 'production' ? 80 : 5140 }}"
+      maxPort: "${{ env.LITTLEIL_ENV === 'production' ? 80 : 5140 }}"
       selfUrl: ${{ env.SELF_URL_PUBLIC }}
     server-temp:qmvgdc:
       selfUrl: ${{ env.SELF_URL_PRIVATE }}
@@ -25,6 +25,7 @@ plugins:
         password: ${{ env.ADMIN_PASSWORD }}
     config:0n6vxu: {}
     console:zsv61x:
+      $if: env.NODE_ENV === 'development'
       open: false
     dataview:j608ho: {}
     explorer:u2zb6t: {}
